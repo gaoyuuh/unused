@@ -1,0 +1,16 @@
+PODS:
+  - UnusedCls (0.1.0)
+
+DEPENDENCIES:
+  - UnusedCls (from `./Modules/UnusedCls`)
+
+EXTERNAL SOURCES:
+  UnusedCls:
+    :path: "./Modules/UnusedCls"
+
+SPEC CHECKSUMS:
+  UnusedCls: f8f0ad91d243814c01f7c14b7cce384fbca2e3a8
+
+PODFILE CHECKSUM: 9c441edaf4934f38ba51a1463db297936184ec1c
+
+COCOAPODS: 1.15.2

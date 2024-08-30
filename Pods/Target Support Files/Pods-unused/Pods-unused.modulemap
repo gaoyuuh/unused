@@ -1,0 +1,6 @@
+framework module Pods_unused {
+  umbrella header "Pods-unused-umbrella.h"
+
+  export *
+  module * { export * }
+}

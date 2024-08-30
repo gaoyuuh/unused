@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09A2AB5BDACE52F3AFEDB32B1B0EE974 /* UnusedCls-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B454C6F6073C234B06FB814D8E79B912 /* UnusedCls-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		288D8CD1341D7021EE28E59D22CC2734 /* ChainFixUpsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 929CDF5A30F22BD296D85ECB36804887 /* ChainFixUpsHelper.m */; };
+		2AB6266C336A6D3D60C017F0955EBD14 /* MachOUtils+UnusedCls.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CB454CB4BB233BEF951F84BF231B18 /* MachOUtils+UnusedCls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37F381ABF6B2A84AA4D9F841A89DB37A /* WBBladesCMD.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BA91E5C1A62EE31698DE252BCD3AB35 /* WBBladesCMD.mm */; };
+		3A1D1C3BC024B891666834C773018173 /* Pods-unused-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD019A14365B8BBB6B11E64047D748 /* Pods-unused-dummy.m */; };
+		4B726BC7A86670D3FFF1D4EE91DEB9D5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		4FBC6CAF0D35FFA8888C34C224BEE6B1 /* UnusedCls.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C49B6972E1677887A2FE1D9F2E0FC2 /* UnusedCls.m */; };
+		5ED550C9815006E4293B4CD6BB59335E /* MachOUtils+UnusedCls.m in Sources */ = {isa = PBXBuildFile; fileRef = A86F61E258AA581228B0C37DDF03D5EE /* MachOUtils+UnusedCls.m */; };
+		76E90F9803C885B7F70A6ADC9D5AC73D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		7C783DC315EFE892F79A6BC56D357DC6 /* UnusedTool.h in Headers */ = {isa = PBXBuildFile; fileRef = E62B0A81CDF94AA8DC2EC09124060D9E /* UnusedTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86D11AF7E3C6248A60C903B4B3170DE6 /* MachOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EC5C08832380D5F92AEFB93ABCDBC9 /* MachOUtils.m */; };
+		882F7568B8CDBDCA88B7C79971ECD049 /* UnusedCls.h in Headers */ = {isa = PBXBuildFile; fileRef = F23324BBE3403DA4C0237BFEDA237569 /* UnusedCls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		890F1969A9569E84F9867B97A91414DD /* UnusedTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B86223DFCBA66862BA43E0764013C /* UnusedTool.m */; };
+		A9EAF95B8D114CD6F210B1D717B53ABE /* UnusedCls-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D5EFA904BE16B4BFBE6A4F57FC97E4 /* UnusedCls-dummy.m */; };
+		B9D9381FD4A0FDEE17D0925E28D17220 /* WBBladesFileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D00F54AAB4454B3BF28E1E371E3B309 /* WBBladesFileManager.mm */; };
+		DC67D794514B6C7CD1EF29268C594BE7 /* MachOUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2B7BEA9EF8ED073B35BBA9C5F4DC5E /* MachOUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE05E496C0188F696831C20D941CB4F3 /* ChainFixUpsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A1749FCF32FC28A03F4FB1F24BACAAB /* ChainFixUpsHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6410DE3B28FC47EDEE88C9499CF2C15 /* WBBladesFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 724519DA2F1DF88B60B2716872DAA88A /* WBBladesFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA68FD1917E71A8A5CAD4E587340094E /* WBBladesDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE1F3EEC48A3B673925AA023695F973 /* WBBladesDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1024758C39293AD9BF17188F404760B /* Pods-unused-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B2422D5B027C00E8BD97E49603D01A /* Pods-unused-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8FD549F5DAFC7D25C891BBEE1D2B118 /* WBBladesCMD.h in Headers */ = {isa = PBXBuildFile; fileRef = 554C186EEA9D62F5D16DA854609AFC00 /* WBBladesCMD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A09CF37B7783DD8A2346660452636EED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B6FBD74DA8F107E8FE6ECB6E7E02379;
+			remoteInfo = UnusedCls;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09D5EFA904BE16B4BFBE6A4F57FC97E4 /* UnusedCls-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UnusedCls-dummy.m"; sourceTree = "<group>"; };
+		0D00F54AAB4454B3BF28E1E371E3B309 /* WBBladesFileManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WBBladesFileManager.mm; path = UnusedCls/Classes/WBBladesFileManager.mm; sourceTree = "<group>"; };
+		16D23F1597D0D2ED1CE4E68E5ABE8AF3 /* Pods-unused.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-unused.release.xcconfig"; sourceTree = "<group>"; };
+		1A1749FCF32FC28A03F4FB1F24BACAAB /* ChainFixUpsHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChainFixUpsHelper.h; path = UnusedCls/Classes/ChainFixUpsHelper.h; sourceTree = "<group>"; };
+		29CD019A14365B8BBB6B11E64047D748 /* Pods-unused-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-unused-dummy.m"; sourceTree = "<group>"; };
+		2CC1DE52D4E894FE1CFE7FFFE405D0AB /* UnusedCls.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UnusedCls.modulemap; sourceTree = "<group>"; };
+		4B2B7BEA9EF8ED073B35BBA9C5F4DC5E /* MachOUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MachOUtils.h; path = UnusedCls/Classes/MachOUtils.h; sourceTree = "<group>"; };
+		4BA91E5C1A62EE31698DE252BCD3AB35 /* WBBladesCMD.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WBBladesCMD.mm; path = UnusedCls/Classes/WBBladesCMD.mm; sourceTree = "<group>"; };
+		554C186EEA9D62F5D16DA854609AFC00 /* WBBladesCMD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBBladesCMD.h; path = UnusedCls/Classes/WBBladesCMD.h; sourceTree = "<group>"; };
+		62B1F03AC34507EA50809152C2BBEBDE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6CA4127267B87C6D096159023CDD7373 /* UnusedCls.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UnusedCls.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		724519DA2F1DF88B60B2716872DAA88A /* WBBladesFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBBladesFileManager.h; path = UnusedCls/Classes/WBBladesFileManager.h; sourceTree = "<group>"; };
+		7C7B86223DFCBA66862BA43E0764013C /* UnusedTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnusedTool.m; path = UnusedCls/Classes/UnusedTool.m; sourceTree = "<group>"; };
+		81944E8015AB4B85804C5A3B5CDB09B0 /* UnusedCls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UnusedCls.debug.xcconfig; sourceTree = "<group>"; };
+		88C49B6972E1677887A2FE1D9F2E0FC2 /* UnusedCls.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UnusedCls.m; path = UnusedCls/Classes/UnusedCls.m; sourceTree = "<group>"; };
+		929CDF5A30F22BD296D85ECB36804887 /* ChainFixUpsHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChainFixUpsHelper.m; path = UnusedCls/Classes/ChainFixUpsHelper.m; sourceTree = "<group>"; };
+		9883D3643F10FE71A6D046F1C460DD2D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A27E95E26DC137C205B00404C625B4EA /* Pods-unused.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-unused.modulemap"; sourceTree = "<group>"; };
+		A2EC5C08832380D5F92AEFB93ABCDBC9 /* MachOUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MachOUtils.m; path = UnusedCls/Classes/MachOUtils.m; sourceTree = "<group>"; };
+		A7CB454CB4BB233BEF951F84BF231B18 /* MachOUtils+UnusedCls.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MachOUtils+UnusedCls.h"; path = "UnusedCls/Classes/MachOUtils+UnusedCls.h"; sourceTree = "<group>"; };
+		A7D848D2BD2D6E7776E25F6A4E4EE78A /* Pods-unused-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-unused-acknowledgements.plist"; sourceTree = "<group>"; };
+		A86F61E258AA581228B0C37DDF03D5EE /* MachOUtils+UnusedCls.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MachOUtils+UnusedCls.m"; path = "UnusedCls/Classes/MachOUtils+UnusedCls.m"; sourceTree = "<group>"; };
+		AAD359F47B13FEA26994970F1ADED542 /* UnusedCls-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnusedCls-Info.plist"; sourceTree = "<group>"; };
+		AE9BF9822F63E15E4FCD3E86A7B0EFEA /* UnusedCls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UnusedCls.release.xcconfig; sourceTree = "<group>"; };
+		B3ADB7DB1C1C7FFC866DCA12EF4FD227 /* UnusedCls-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnusedCls-prefix.pch"; sourceTree = "<group>"; };
+		B454C6F6073C234B06FB814D8E79B912 /* UnusedCls-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnusedCls-umbrella.h"; sourceTree = "<group>"; };
+		B5972514B125204CEC511EA8C59F5EBC /* UnusedCls */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UnusedCls; path = UnusedCls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE1F3EEC48A3B673925AA023695F973 /* WBBladesDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBBladesDefines.h; path = UnusedCls/Classes/WBBladesDefines.h; sourceTree = "<group>"; };
+		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		C1B949DE4DAC311C90B4A527A334B73B /* Pods-unused */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-unused"; path = Pods_unused.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B2422D5B027C00E8BD97E49603D01A /* Pods-unused-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-unused-umbrella.h"; sourceTree = "<group>"; };
+		CB76BA86A2E9FD02CF035A25AFCA1061 /* Pods-unused.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-unused.debug.xcconfig"; sourceTree = "<group>"; };
+		E62B0A81CDF94AA8DC2EC09124060D9E /* UnusedTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnusedTool.h; path = UnusedCls/Classes/UnusedTool.h; sourceTree = "<group>"; };
+		F23324BBE3403DA4C0237BFEDA237569 /* UnusedCls.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnusedCls.h; path = UnusedCls/Classes/UnusedCls.h; sourceTree = "<group>"; };
+		F260717BE27B029725299005BFE3EF08 /* Pods-unused-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-unused-Info.plist"; sourceTree = "<group>"; };
+		FA72E08002801B1C6CAB775741DFDEE3 /* Pods-unused-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-unused-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CEF2A02E6BD1781D4FFD65EDDEE1FF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B726BC7A86670D3FFF1D4EE91DEB9D5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA8B1272C6D4DA71B06618F09E3C6FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E90F9803C885B7F70A6ADC9D5AC73D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21ECA17B5F4A069914142403C6009EE0 /* UnusedCls */ = {
+			isa = PBXGroup;
+			children = (
+				1A1749FCF32FC28A03F4FB1F24BACAAB /* ChainFixUpsHelper.h */,
+				929CDF5A30F22BD296D85ECB36804887 /* ChainFixUpsHelper.m */,
+				4B2B7BEA9EF8ED073B35BBA9C5F4DC5E /* MachOUtils.h */,
+				A2EC5C08832380D5F92AEFB93ABCDBC9 /* MachOUtils.m */,
+				A7CB454CB4BB233BEF951F84BF231B18 /* MachOUtils+UnusedCls.h */,
+				A86F61E258AA581228B0C37DDF03D5EE /* MachOUtils+UnusedCls.m */,
+				F23324BBE3403DA4C0237BFEDA237569 /* UnusedCls.h */,
+				88C49B6972E1677887A2FE1D9F2E0FC2 /* UnusedCls.m */,
+				E62B0A81CDF94AA8DC2EC09124060D9E /* UnusedTool.h */,
+				7C7B86223DFCBA66862BA43E0764013C /* UnusedTool.m */,
+				554C186EEA9D62F5D16DA854609AFC00 /* WBBladesCMD.h */,
+				4BA91E5C1A62EE31698DE252BCD3AB35 /* WBBladesCMD.mm */,
+				BEE1F3EEC48A3B673925AA023695F973 /* WBBladesDefines.h */,
+				724519DA2F1DF88B60B2716872DAA88A /* WBBladesFileManager.h */,
+				0D00F54AAB4454B3BF28E1E371E3B309 /* WBBladesFileManager.mm */,
+				EF60F4F5BB87A3188BC0B7CF1FAD5116 /* Pod */,
+				E2A26D57F88E72E7EE7680ECE6FC255A /* Support Files */,
+			);
+			name = UnusedCls;
+			path = ../Modules/UnusedCls;
+			sourceTree = "<group>";
+		};
+		B039765AE02D3F7ABD190A811B56F7AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1B949DE4DAC311C90B4A527A334B73B /* Pods-unused */,
+				B5972514B125204CEC511EA8C59F5EBC /* UnusedCls */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C275C9F93FDC14FA4FE04C4EA107E733 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21ECA17B5F4A069914142403C6009EE0 /* UnusedCls */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C275C9F93FDC14FA4FE04C4EA107E733 /* Development Pods */,
+				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
+				B039765AE02D3F7ABD190A811B56F7AE /* Products */,
+				DABA0B5E7FA9A39037F644619E9284A3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D8FC8ED3E0B03CE683AF0687AE31867D /* Pods-unused */ = {
+			isa = PBXGroup;
+			children = (
+				A27E95E26DC137C205B00404C625B4EA /* Pods-unused.modulemap */,
+				FA72E08002801B1C6CAB775741DFDEE3 /* Pods-unused-acknowledgements.markdown */,
+				A7D848D2BD2D6E7776E25F6A4E4EE78A /* Pods-unused-acknowledgements.plist */,
+				29CD019A14365B8BBB6B11E64047D748 /* Pods-unused-dummy.m */,
+				F260717BE27B029725299005BFE3EF08 /* Pods-unused-Info.plist */,
+				C6B2422D5B027C00E8BD97E49603D01A /* Pods-unused-umbrella.h */,
+				CB76BA86A2E9FD02CF035A25AFCA1061 /* Pods-unused.debug.xcconfig */,
+				16D23F1597D0D2ED1CE4E68E5ABE8AF3 /* Pods-unused.release.xcconfig */,
+			);
+			name = "Pods-unused";
+			path = "Target Support Files/Pods-unused";
+			sourceTree = "<group>";
+		};
+		DABA0B5E7FA9A39037F644619E9284A3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8FC8ED3E0B03CE683AF0687AE31867D /* Pods-unused */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A8756CA1FF5258A0344D53C5C60EC1 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2A26D57F88E72E7EE7680ECE6FC255A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CC1DE52D4E894FE1CFE7FFFE405D0AB /* UnusedCls.modulemap */,
+				09D5EFA904BE16B4BFBE6A4F57FC97E4 /* UnusedCls-dummy.m */,
+				AAD359F47B13FEA26994970F1ADED542 /* UnusedCls-Info.plist */,
+				B3ADB7DB1C1C7FFC866DCA12EF4FD227 /* UnusedCls-prefix.pch */,
+				B454C6F6073C234B06FB814D8E79B912 /* UnusedCls-umbrella.h */,
+				81944E8015AB4B85804C5A3B5CDB09B0 /* UnusedCls.debug.xcconfig */,
+				AE9BF9822F63E15E4FCD3E86A7B0EFEA /* UnusedCls.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../Pods/Target Support Files/UnusedCls";
+			sourceTree = "<group>";
+		};
+		E2A8756CA1FF5258A0344D53C5C60EC1 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		EF60F4F5BB87A3188BC0B7CF1FAD5116 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				62B1F03AC34507EA50809152C2BBEBDE /* LICENSE */,
+				9883D3643F10FE71A6D046F1C460DD2D /* README.md */,
+				6CA4127267B87C6D096159023CDD7373 /* UnusedCls.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		254AB85A9C386C5C5B45CE1A82710924 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1024758C39293AD9BF17188F404760B /* Pods-unused-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6250A237EEF329BE138556EDF0DB74C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE05E496C0188F696831C20D941CB4F3 /* ChainFixUpsHelper.h in Headers */,
+				DC67D794514B6C7CD1EF29268C594BE7 /* MachOUtils.h in Headers */,
+				2AB6266C336A6D3D60C017F0955EBD14 /* MachOUtils+UnusedCls.h in Headers */,
+				882F7568B8CDBDCA88B7C79971ECD049 /* UnusedCls.h in Headers */,
+				09A2AB5BDACE52F3AFEDB32B1B0EE974 /* UnusedCls-umbrella.h in Headers */,
+				7C783DC315EFE892F79A6BC56D357DC6 /* UnusedTool.h in Headers */,
+				F8FD549F5DAFC7D25C891BBEE1D2B118 /* WBBladesCMD.h in Headers */,
+				EA68FD1917E71A8A5CAD4E587340094E /* WBBladesDefines.h in Headers */,
+				E6410DE3B28FC47EDEE88C9499CF2C15 /* WBBladesFileManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B6FBD74DA8F107E8FE6ECB6E7E02379 /* UnusedCls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E1B2F9749F98E1E94438F1C241E1CF1 /* Build configuration list for PBXNativeTarget "UnusedCls" */;
+			buildPhases = (
+				F6250A237EEF329BE138556EDF0DB74C /* Headers */,
+				18A229D5724E39A2A8924EDD5ABA3434 /* Sources */,
+				2CEF2A02E6BD1781D4FFD65EDDEE1FF5 /* Frameworks */,
+				3B55B214809AA65CD6EA1479F5C6F07B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnusedCls;
+			productName = UnusedCls;
+			productReference = B5972514B125204CEC511EA8C59F5EBC /* UnusedCls */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA6236F99D51776447F71565EBBC488F /* Pods-unused */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F5FF5AF3A1E90B28EC07B4A9565737 /* Build configuration list for PBXNativeTarget "Pods-unused" */;
+			buildPhases = (
+				254AB85A9C386C5C5B45CE1A82710924 /* Headers */,
+				603237D79713A7AAC6852965663022E7 /* Sources */,
+				8BA8B1272C6D4DA71B06618F09E3C6FB /* Frameworks */,
+				48400924A6FAA495CAD34E16220FCE52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00BD7555DE566A7356FCE832503A59CA /* PBXTargetDependency */,
+			);
+			name = "Pods-unused";
+			productName = Pods_unused;
+			productReference = C1B949DE4DAC311C90B4A527A334B73B /* Pods-unused */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			productRefGroup = B039765AE02D3F7ABD190A811B56F7AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA6236F99D51776447F71565EBBC488F /* Pods-unused */,
+				2B6FBD74DA8F107E8FE6ECB6E7E02379 /* UnusedCls */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B55B214809AA65CD6EA1479F5C6F07B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48400924A6FAA495CAD34E16220FCE52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18A229D5724E39A2A8924EDD5ABA3434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				288D8CD1341D7021EE28E59D22CC2734 /* ChainFixUpsHelper.m in Sources */,
+				86D11AF7E3C6248A60C903B4B3170DE6 /* MachOUtils.m in Sources */,
+				5ED550C9815006E4293B4CD6BB59335E /* MachOUtils+UnusedCls.m in Sources */,
+				4FBC6CAF0D35FFA8888C34C224BEE6B1 /* UnusedCls.m in Sources */,
+				A9EAF95B8D114CD6F210B1D717B53ABE /* UnusedCls-dummy.m in Sources */,
+				890F1969A9569E84F9867B97A91414DD /* UnusedTool.m in Sources */,
+				37F381ABF6B2A84AA4D9F841A89DB37A /* WBBladesCMD.mm in Sources */,
+				B9D9381FD4A0FDEE17D0925E28D17220 /* WBBladesFileManager.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603237D79713A7AAC6852965663022E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1D1C3BC024B891666834C773018173 /* Pods-unused-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00BD7555DE566A7356FCE832503A59CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UnusedCls;
+			target = 2B6FBD74DA8F107E8FE6ECB6E7E02379 /* UnusedCls */;
+			targetProxy = A09CF37B7783DD8A2346660452636EED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2FDE04FD40C1C48F804E161EC2C09DC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		72E1FBA5BCA0FA408FFF9CA2F1036E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81944E8015AB4B85804C5A3B5CDB09B0 /* UnusedCls.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UnusedCls/UnusedCls-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UnusedCls/UnusedCls-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/UnusedCls/UnusedCls.modulemap";
+				PRODUCT_MODULE_NAME = UnusedCls;
+				PRODUCT_NAME = UnusedCls;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8D379AC725D37F2A75D9B1D7400D46D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ABF68FA47387DD97FE27BA22DE8A602C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE9BF9822F63E15E4FCD3E86A7B0EFEA /* UnusedCls.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UnusedCls/UnusedCls-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UnusedCls/UnusedCls-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/UnusedCls/UnusedCls.modulemap";
+				PRODUCT_MODULE_NAME = UnusedCls;
+				PRODUCT_NAME = UnusedCls;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAF41B8C2E3D3DFDCE0837419496D8A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D23F1597D0D2ED1CE4E68E5ABE8AF3 /* Pods-unused.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-unused/Pods-unused-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MODULEMAP_FILE = "Target Support Files/Pods-unused/Pods-unused.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F1A6591B52C635D03CDE81AC1F596C04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB76BA86A2E9FD02CF035A25AFCA1061 /* Pods-unused.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-unused/Pods-unused-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MODULEMAP_FILE = "Target Support Files/Pods-unused/Pods-unused.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D379AC725D37F2A75D9B1D7400D46D /* Debug */,
+				2FDE04FD40C1C48F804E161EC2C09DC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E1B2F9749F98E1E94438F1C241E1CF1 /* Build configuration list for PBXNativeTarget "UnusedCls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72E1FBA5BCA0FA408FFF9CA2F1036E41 /* Debug */,
+				ABF68FA47387DD97FE27BA22DE8A602C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F5FF5AF3A1E90B28EC07B4A9565737 /* Build configuration list for PBXNativeTarget "Pods-unused" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1A6591B52C635D03CDE81AC1F596C04 /* Debug */,
+				CAF41B8C2E3D3DFDCE0837419496D8A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

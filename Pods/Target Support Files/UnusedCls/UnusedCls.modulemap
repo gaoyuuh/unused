@@ -1,0 +1,6 @@
+framework module UnusedCls {
+  umbrella header "UnusedCls-umbrella.h"
+
+  export *
+  module * { export * }
+}
