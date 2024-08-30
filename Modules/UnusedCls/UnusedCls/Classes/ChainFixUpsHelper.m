@@ -12,6 +12,7 @@
 #import <mach-o/loader.h>
 #import <mach-o/fat.h>
 #import <mach-o/nlist.h>
+#import "UnusedTool.h"
 
 struct dyld_chained_fixups_header
 {
@@ -251,7 +252,7 @@ static ChainFixUpsHelper *shareInstance = nil;
     
     [self.fileData getBytes:&fixupsHeader range:NSMakeRange(linkeditFileOffset, sizeof(fixupsHeader))];
     
-//    NSLog(@"dyld_chained_fixups_header 的信息如下| fixups_version | %d | starts_offset | %d | imports_offset | %d | symbols_offset | %d | imports_count | %d | imports_format | %d | symbols_format | %d |",fixupsHeader.fixups_version,fixupsHeader.starts_offset,fixupsHeader.imports_offset,fixupsHeader.symbols_offset,fixupsHeader.imports_count,fixupsHeader.imports_format,fixupsHeader.symbols_format);
+//    DebugLog(@"dyld_chained_fixups_header 的信息如下| fixups_version | %d | starts_offset | %d | imports_offset | %d | symbols_offset | %d | imports_count | %d | imports_format | %d | symbols_format | %d |",fixupsHeader.fixups_version,fixupsHeader.starts_offset,fixupsHeader.imports_offset,fixupsHeader.symbols_offset,fixupsHeader.imports_count,fixupsHeader.imports_format,fixupsHeader.symbols_format);
     
 
     //输出外部导入符号
@@ -319,7 +320,7 @@ static ChainFixUpsHelper *shareInstance = nil;
         if(seg_ingo_offset != 0){
             struct dyld_chained_starts_in_segment chained_start_segment;
             [self.fileData getBytes:&chained_start_segment range:NSMakeRange(linkeditFileOffset+fixupsHeader.starts_offset+seg_ingo_offset, sizeof(chained_start_segment))];
-            NSLog(@"当前正在解析的segment[%ld]：%@ | seg_ingo_offset:%d\n          size: %d \n          pageSize: 0x%x \n          pointer_format: %d \n          segment_offset: 0x%llx \n          page_count: %d \n          page_start: 0x%x",(long)i,self.segmentNames[i],seg_ingo_offset,chained_start_segment.size,chained_start_segment.page_size,chained_start_segment.pointer_format,chained_start_segment.segment_offset,chained_start_segment.page_count,chained_start_segment.page_start[0]);
+            DebugLog(@"当前正在解析的segment[%ld]：%@ | seg_ingo_offset:%d\n          size: %d \n          pageSize: 0x%x \n          pointer_format: %d \n          segment_offset: 0x%llx \n          page_count: %d \n          page_start: 0x%x",(long)i,self.segmentNames[i],seg_ingo_offset,chained_start_segment.size,chained_start_segment.page_size,chained_start_segment.pointer_format,chained_start_segment.segment_offset,chained_start_segment.page_count,chained_start_segment.page_start[0]);
             //解析当pagecount大于1时候，每个page的偏移page_start 解析每个page中的rebase 和 bind 信息
             uint16_t    page_start[chained_start_segment.page_count];
             [self.fileData getBytes:&page_start range:NSMakeRange(linkeditFileOffset+fixupsHeader.starts_offset+seg_ingo_offset+sizeof(chained_start_segment)-sizeof(uint16_t), sizeof(uint16_t)*chained_start_segment.page_count)];
@@ -330,12 +331,12 @@ static ChainFixUpsHelper *shareInstance = nil;
                         //此时使用dyld_chained_ptr_64_bind或者dyld_chained_ptr_64_rebase去解析均可，我们通过判断bind位是否==1来判定 找到链表头结点
                     {
                         NSInteger pageStart = chained_start_segment.segment_offset+page_start[i]+i*chained_start_segment.page_size;
-//                        NSLog(@"=====================pageNumber：%ld======================================",(long)i);
+//                        DebugLog(@"=====================pageNumber：%ld======================================",(long)i);
                         [self walkChainFixUpsWithOffset:pageStart];
                     }
                         break;
                     default:
-                        NSLog(@"请检查Mach-O的架构");
+                        ErrorLog(@"请检查Mach-O的架构");
                         break;
                 }
             }
@@ -355,11 +356,11 @@ static ChainFixUpsHelper *shareInstance = nil;
             struct dyld_chained_ptr_64_bind  generic64Bind;
             [self.fileData getBytes:&generic64Bind range:NSMakeRange(chained_next_offset, sizeof(generic64Bind))];
             self.bindAdreesInfos[@(chained_next_offset)] = self.importSymbolPool[generic64Bind.ordinal];
-            NSLog(@"0x%lx  raw:0x%llx bind：(next：%d, ordinal：%d, append：%d, symbol：%@)",(long)chained_next_offset,rawValue,generic64Bind.next,generic64Bind.ordinal,generic64Bind.addend,self.importSymbolPool[generic64Bind.ordinal]);
+            DebugLog(@"0x%lx  raw:0x%llx bind：(next：%d, ordinal：%d, append：%d, symbol：%@)",(long)chained_next_offset,rawValue,generic64Bind.next,generic64Bind.ordinal,generic64Bind.addend,self.importSymbolPool[generic64Bind.ordinal]);
         }else{
             struct dyld_chained_ptr_64_rebase  generic64Rebase;
             [self.fileData getBytes:&generic64Rebase range:NSMakeRange(chained_next_offset, sizeof(generic64Rebase))];
-            NSLog(@"0x%lx  raw:0x%llx  rebase：(next：%d, target：0x%llx, heigh8：0x%x)",(long)chained_next_offset,rawValue,generic64Rebase.next,generic64Rebase.target,generic64Rebase.high8);
+            DebugLog(@"0x%lx  raw:0x%llx  rebase：(next：%d, target：0x%llx, heigh8：0x%x)",(long)chained_next_offset,rawValue,generic64Rebase.next,generic64Rebase.target,generic64Rebase.high8);
         }
         chained_next_offset += generic64.next * 4;
     } while (generic64.next != 0);

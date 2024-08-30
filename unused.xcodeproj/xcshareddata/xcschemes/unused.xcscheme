@@ -57,6 +57,10 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "-class -path /Users/gaoyu/Desktop/Orange-RD.ipa"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "-class -path /Users/gaoyu/Desktop/Orange.app"
             isEnabled = "NO">
          </CommandLineArgument>

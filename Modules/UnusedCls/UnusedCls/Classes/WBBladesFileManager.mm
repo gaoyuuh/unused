@@ -8,6 +8,7 @@
 
 #import "WBBladesFileManager.h"
 #import "WBBladesCMD.h"
+#import "UnusedTool.h"
 
 @implementation WBBladesFileManager
 
@@ -17,7 +18,7 @@
                                                     options:NSDataReadingMappedIfSafe
                                                       error:NULL];
     if (!fileData) {
-        NSLog(@"文件读取失败");
+        ErrorLog(@"文件读取失败");
     }
     return fileData;
 }
@@ -48,7 +49,7 @@
     removeCopyFile(filePath);
     uint32_t cputype = *(uint32_t*)((uint8_t *)[fileData bytes] + 4);
     if (!fileData || cputype != CPU_TYPE_ARM64 ) {
-        NSLog(@"文件读取失败，请输入使用arm64真机的debug包");
+        ErrorLog(@"文件读取失败，请输入使用arm64真机的debug包");
         return nil;
     }
     return fileData;
@@ -79,7 +80,7 @@
     removeCopyFile(filePath);
     uint32_t cputype = *(uint32_t*)((uint8_t *)[fileData bytes] + 4);
     if (!fileData || cputype != CPU_TYPE_ARM64) {
-        NSLog(@"文件读取失败，请输入使用arm64真机的debug包");
+        ErrorLog(@"文件读取失败，请输入使用arm64真机的debug包");
         return nil;
     }
     return fileData;

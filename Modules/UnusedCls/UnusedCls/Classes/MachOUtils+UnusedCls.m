@@ -20,7 +20,7 @@
 #import "UnusedTool.h"
 
 #define ScanUnusedClassLogInfo(log) \
-NSLog(@"%@", log); \
+DebugLog(@"%@", log); \
 if (scanProgressBlock) {\
     scanProgressBlock(log);\
 }
@@ -70,7 +70,7 @@ static struct section_64 swift5Types = {0};
                     struct section_64 sectionHeader;
                     [fileData getBytes:&sectionHeader range:NSMakeRange(currentSecLocation, sizeof(struct section_64))];
                     NSString *secName = [[NSString alloc] initWithUTF8String:sectionHeader.sectname];
-                    NSLog(@"__DATA section: %@", secName);
+                    DebugLog(@"__DATA section: %@", secName);
                     //note classlist
                     if ([secName isEqualToString:DATA_CLASSLIST_SECTION] ||
                         [secName isEqualToString:CONST_DATA_CLASSLIST_SECTION]) {
@@ -108,7 +108,7 @@ static struct section_64 swift5Types = {0};
                     struct section_64 sectionHeader;
                     [fileData getBytes:&sectionHeader range:NSMakeRange(currentSecLocation, sizeof(struct section_64))];
                     NSString *secName = [[NSString alloc] initWithUTF8String:sectionHeader.sectname];
-                    NSLog(@"__TEXT section: %@", secName);
+                    DebugLog(@"__TEXT section: %@", secName);
                     if ([secName isEqualToString:TEXT_TEXT_SECTION]) {
                         textList = sectionHeader;
 
@@ -331,7 +331,7 @@ fileData：从磁盘中读取的二进制文件，通常是可执行文件。
                  uint8_t *buffer = (uint8_t *)malloc(cfstring.size + 1); buffer[cfstring.size] = '\0';
                  [fileData getBytes:buffer range:NSMakeRange(stringOff, cfstring.size)];
                  NSString *className = NSSTRING(buffer);
-                 // NSLog(@"cfString: %@", className);
+                 // DebugLog(@"cfString: %@", className);
                  free(buffer);
                  if (className){
                      [classrefSet addObject:className];
@@ -357,7 +357,7 @@ fileData：从磁盘中读取的二进制文件，通常是可执行文件。
                     char *str_buffer = (char *)malloc(str_len+1); str_buffer[str_len] = '\0';
                     [fileData getBytes:str_buffer range:NSMakeRange(start_loc, str_len)];
                     NSString *cString = [NSString stringWithCString:str_buffer encoding:NSUTF8StringEncoding];
-                    // NSLog(@"cfString: %@", className);
+                    // DebugLog(@"cfString: %@", className);
                     if (cString && ![cString hasPrefix:@"_TtC"]) {
                         [classrefSet addObject:cString];
                     }
@@ -517,7 +517,7 @@ fileData：从磁盘中读取的二进制文件，通常是可执行文件。
  usedClasses：被标记为有用到的类
  */
 + (NSArray*)diffClasses:(NSMutableSet *)allClasses used:(NSMutableSet *)usedClasses classSize:(NSMutableDictionary *)sizeDic fileData:(NSData *)fileData {
-    NSLog(@"allClass: %d  refClass: %d", (int)allClasses.count, (int)usedClasses.count);
+    DebugLog(@"allClass: %d  refClass: %d", (int)allClasses.count, (int)usedClasses.count);
     // allClasses和usedClasses做差集
     NSMutableSet *newAllClasses = [[NSMutableSet alloc] init];
     [allClasses enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
@@ -579,7 +579,7 @@ fileData：从磁盘中读取的二进制文件，通常是可执行文件。
     NSDictionary *ocRes = [self statOCClassSize:classList unusedOCClasses:ocList fileData:fileData];
     // 统计swift类大小，swiftRes结构为<类名NSString,类大小NSNumber>
 //    NSDictionary *swiftRes = [self statSwiftClassSize:swiftClsDic andSwift5Types:swift5Types fileData:fileData];
-//    NSLog(@"swiftRes: %@",swiftRes);
+//    DebugLog(@"swiftRes: %@",swiftRes);
     
     return @[ocRes, @{}];
 }

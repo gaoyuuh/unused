@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UnusedCls/UnusedCls.h>
+#import "UnusedTool.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -28,8 +29,8 @@ int main(int argc, const char * argv[]) {
         }
         
         if (path == nil) {
-            NSLog(@"-path option provided, but no path specified.");
-            NSLog(@"unused -class -path xxx.app");
+            ErrorLog(@"-path option provided, but no path specified.");
+            ErrorLog(@"unused -class -path xxx.app");
             return -1;
         }
         

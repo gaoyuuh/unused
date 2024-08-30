@@ -8,6 +8,15 @@
 #import <Foundation/Foundation.h>
 #import "WBBladesDefines.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+void ErrorLog(NSString * _Nonnull format, ...);
+void DebugLog(NSString * _Nonnull format, ...);
+#ifdef __cplusplus
+}
+#endif
+
 @interface UnusedTool : NSObject
 
 + (NSData *)readBytes:(NSRange *)range length:(NSUInteger)length fromFile:(NSData *)fileData;

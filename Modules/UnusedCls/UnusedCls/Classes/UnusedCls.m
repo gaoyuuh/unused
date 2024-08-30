@@ -9,6 +9,7 @@
 #import "WBBladesCMD.h"
 #import "WBBladesFileManager.h"
 #import "MachOUtils+UnusedCls.h"
+#import "UnusedTool.h"
 
 @implementation UnusedCls
 
@@ -16,7 +17,8 @@
     [self scanUnusedClassWithAppPath:path fromLibs:@[]];
 }
 
-+ (NSArray<NSDictionary<NSString *, NSNumber *> *> *)scanUnusedClassWithAppPath:(NSString *)appFilePath fromLibs:(NSArray<NSString *> *)fromLibsPath {
++ (NSArray<NSDictionary<NSString *, NSNumber *> *> *)scanUnusedClassWithAppPath:(NSString *)appFilePath 
+                                                                       fromLibs:(NSArray<NSString *> *)fromLibsPath {
 
     NSString *appPath = getAppPathIfIpa(appFilePath);
     NSData *appData = [WBBladesFileManager readArm64FromFile:appPath];
@@ -25,11 +27,18 @@
         
     }];
     
-    NSLog(@"%@ %d", result, (int)result.count);
+    NSMutableArray *tmp = [NSMutableArray array];
+    for (NSDictionary *dic in result) {
+        [tmp addObjectsFromArray:dic.allKeys];
+        for (NSString *key in dic.allKeys) {
+            printf("%s\n", [key UTF8String]);
+        }
+    }
+    DebugLog(@"%@\n %d", tmp, (int)tmp.count);
 
     rmAppIfIpa(appFilePath);
     
-    return @[];
+    return result;
 }
 
 @end

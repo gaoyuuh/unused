@@ -8,6 +8,7 @@
 
 #import "WBBladesCMD.h"
 #import <mach-o/fat.h>
+#import "UnusedTool.h"
 
 // Execute command in console.
 static NSData * cmd(NSString *cmd) {
@@ -27,8 +28,8 @@ static NSData * cmd(NSString *cmd) {
 
 static int i = 0;
 NSString* createDeskTempDirectory() {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-    NSString *theDesktopPath = [paths.firstObject stringByAppendingFormat:@"/wbbladestmp"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *theDesktopPath = [paths.firstObject stringByAppendingFormat:@"/UnusedTmp"];
     NSTimeInterval timeInterval =  [[NSDate date] timeIntervalSince1970];
     theDesktopPath = [theDesktopPath stringByAppendingFormat:@"/%@%@", @(timeInterval), @(i++)];
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -46,7 +47,7 @@ void rmAppIfIpa(NSString *filePath){
     if ([fileType isEqualToString:@"ipa"]) {
         //创建同级目录
         NSString *parentPath = filePath.stringByDeletingLastPathComponent;
-        NSString *tmpPath = [parentPath stringByAppendingFormat:@"/tmp/"];
+        NSString *tmpPath = [parentPath stringByAppendingFormat:@"/UnusedIPATmp/"];
 //        cmd([NSString stringWithFormat:@"rm -rf %@",tmpPath]);
         NSString *theDesktopPath = createDeskTempDirectory();
         cmd([NSString stringWithFormat:@"mv -f %@ %@",tmpPath, theDesktopPath]);
@@ -63,7 +64,7 @@ NSString* getAppPathIfIpa(NSString *filePath){
         NSFileManager *manager = [NSFileManager defaultManager];
         //创建同级目录
         NSString *parentPath = filePath.stringByDeletingLastPathComponent;
-        NSString *tmpPath = [parentPath stringByAppendingFormat:@"/tmp/"];
+        NSString *tmpPath = [parentPath stringByAppendingFormat:@"/UnusedIPATmp/"];
         NSString *copyPath = [tmpPath stringByAppendingString:@"copy.ipa"];
 
         cmd([NSString stringWithFormat:@"mkdir %@",tmpPath]);
@@ -94,7 +95,7 @@ NSString* getAppPathIfIpa(NSString *filePath){
 }
 
 void stripDysmSymbol(NSString *filePath) {
-    NSLog(@"正在剥离符号表..."); // Strip symbol table.
+    DebugLog(@"正在剥离符号表..."); // Strip symbol table.
     NSString *stripCmd = [NSString stringWithFormat:@"xcrun strip -x -S %@_copy",filePath];
     cmd(stripCmd);
 }
@@ -121,7 +122,7 @@ void thinFile(NSString *filePath) {
     NSArray *archs = [[[NSString alloc] initWithData:cmd(thinCmd) encoding:NSUTF8StringEncoding] componentsSeparatedByString:@" "];
     if (archs.count >= 1) {
         thinCmd = [NSString stringWithFormat:@"lipo %@_copy -thin arm64  -output %@_copy",filePath,filePath];
-        NSLog(@"正在提取arm64架构:%@",filePath); // Strip symbol table.
+        DebugLog(@"正在提取arm64架构:%@",filePath); // Strip symbol table.
         cmd(thinCmd);
     }
 }

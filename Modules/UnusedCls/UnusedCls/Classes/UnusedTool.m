@@ -10,6 +10,24 @@
 #import <dlfcn.h>
 #import "ChainFixUpsHelper.h"
 
+void ErrorLog(NSString * _Nonnull format, ...) {
+    va_list arglist;
+    va_start(arglist, format);
+    NSString *logStr = [[NSString alloc] initWithFormat:format arguments:arglist];
+    NSLog(@"%@", logStr);
+    va_end(arglist);
+}
+
+void DebugLog(NSString * _Nonnull format, ...) {
+    va_list arglist;
+    va_start(arglist, format);
+#ifdef DEBUG
+    NSString *logStr = [[NSString alloc] initWithFormat:format arguments:arglist];
+    NSLog(@"%@", logStr);
+#endif
+    va_end(arglist);
+}
+
 @implementation UnusedTool
 
 + (NSData *)readBytes:(NSRange *)range length:(NSUInteger)length fromFile:(NSData *)fileData {
