@@ -3,6 +3,7 @@
 import os
 import json
 import re
+import time
 
 
 def get_unused_class_fromipa(ipa_path=''):
@@ -12,46 +13,48 @@ def get_unused_class_fromipa(ipa_path=''):
 
 def exists_in_private_modules(modules_dir='', classes=None):
     if classes is None:
-        return False
+        return []
     results = []
-    count = 0
     for cls in classes:
-        command = 'ag -G ".+[.h|.m|.mm|.xml|.xib]" --ignore *.framework -w "%s" %s' % (cls, modules_dir)
+        exist = False
+        command = 'ag -G ".+[.h|.m|.mm|.xml|.xib]" --ignore Pods --ignore *.framework -w %s %s' % (cls, modules_dir)
         result = os.popen(command).read()
         lines = result.split('\n')
-        for line in lines:
-            if line == '':
-                continue
-            result_finditer1 = line.find('@interface ' + cls)
-            result_finditer2 = line.find('@implementation ' + cls)
-            result_finditer3 = line.find('.framework')
-            result_finditer4 = line.find('customClass="' + cls)
-            result_finditer5 = line.find(cls + '.m')
-            temp = line.split(':')
-            content = line
-            if len(temp) >= 3:
-                content = temp[2]
+        print(lines)
+        if len(lines) > 0:
+            exist = True
+        # for line in lines:
+        #     if line == '':
+        #         continue
+            # result_finditer2 = line.find('@implementation ' + cls)
+            # temp = line.split(':')
+            # content = line
+            # if len(temp) >= 3:
+            #     content = temp[2]
+            #
+            # if result_finditer2 == 0 and content.startswith('//') == False:
+            #     exist = True
+            #     break
 
-            if result_finditer1 == -1 and result_finditer2 == -1 and result_finditer3 == -1 and result_finditer4 == -1 and result_finditer5 == -1 and content.startswith(
-                    '//') == False and content.startswith('#import') == False and content.find('IMP_BLOCK_SELF') == -1:
-                count += 1
-
-            if count > 0:
-                break
-
-        if count == 0:
+        if not exist:
             command1 = 'ag -c -G ".+\.plist" -w "%s" %s' % (cls, modules_dir)
             result1 = os.popen(command1).read()
             if result1 != '':
-                count += 1
-        print(cls, count)
-    return True if count > 0 else False
+                exist = True
+        if exist:
+            results.append(cls)
+        print(cls, '存在' if exist else '不存在')
+    return results
 
 
 def check_unuse_class_new(dir='', scheme_name='', ipa_path=''):
-    modules_dir = os.path.join(dir, "Modules")
+    # modules_dir = os.path.join(dir, "Modules")
+    modules_dir = os.path.join(dir, "../")
     classes = get_unused_class_fromipa(ipa_path)
-    exists_in_private_modules(modules_dir, classes)
+    start_time = time.time()
+    real_results = exists_in_private_modules(modules_dir, classes)
+    print(real_results, len(real_results))
+    print("duration：", time.time() - start_time)
     return
 
 if __name__ == '__main__':
@@ -69,4 +72,5 @@ if __name__ == '__main__':
             self.branch = branch
             self.scheme_name = scheme_name
 
-    check_unuse_class_new('/Users/gaoyu/Desktop/techwolf/o2-2.9.3', 'Orange', '/Users/gaoyu/Desktop/Orange-RD.app')
+    # check_unuse_class_new('/Users/gaoyu/Desktop/techwolf/o2-2.9.3', 'Orange', '/Users/gaoyu/Desktop/BossZP-RD.app')
+    check_unuse_class_new('/Users/gaoyu/Desktop/techwolf/boss_1107/bossproject', 'Orange', '/Users/gaoyu/Desktop/BossZP-RD.app')
