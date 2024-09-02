@@ -230,7 +230,7 @@ def findDirCount(className,cdir):
     if ignoreClass.count(className)>0:
         return 1
 
-    command = 'ag -G ".+[.h|.m|.mm|.xml|.xib]" --ignore *.framework -w "%s" %s'%(className, cdir)
+    command = 'ag -G ".+\.(h|m|mm|xml|xib)$" --ignore *.framework -w "%s" %s'%(className, cdir)
     
     lines = []
     try:

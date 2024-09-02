@@ -24,3 +24,12 @@ if __name__ == '__main__':
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+    # # command = 'ag -G ".+[.h|.m|.mm|.xml|.xib]" --ignore *.framework -w "%s" %s'%(className, cdir)
+    # # --ignore Example --ignore *.framework
+    # # -G ".+\.(h|m|mm|xml|xib)$"
+    # command = 'ag -G ".+[.h|.m|.mm|.xml|.xib]" --ignore *.framework "@implementation %s" %s' % (className, cdir)
+    #
+    # lines = []
+    # try:
+    #     result = os.popen(command).read().strip()
