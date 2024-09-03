@@ -374,8 +374,8 @@ def check_unuse_class_new(dir='',scheme_name=''):
     elif app_scheme_name == 'Orange':
         modules = orange_modules
 
-    print('无用头文件检测开始....')
     start_time = datetime.now()
+    print('无用头文件检测开始....', start_time)
     if len(modules) > 0:
         for module in modules:
             # bosshi组件名称，需要+Modules
@@ -412,4 +412,5 @@ def check_unuse_class_new(dir='',scheme_name=''):
     return outList
 
 if __name__ == "__main__":
-    check_unuse_class_new('/Users/gaoyu/Desktop/techwolf/o2-2.9.3', 'Orange')
+    # check_unuse_class_new('/Users/gaoyu/Desktop/techwolf/o2-2.9.3', 'Orange')
+    check_unuse_class_new('/Users/gaoyu/Desktop/techwolf/boss/Project', 'BossZP')
